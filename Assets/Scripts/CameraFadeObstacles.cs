@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraFadeObstacles : MonoBehaviour
 {
-    public Transform target;          // Your player
+    public Transform target;          
     public LayerMask obstacleMask;    // Layer for walls/obstacles
     public float fadedAlpha = 0.3f;   // Opacity when blocking
     public float fadeSpeed = 8f;      // How fast it fades in and out
@@ -23,8 +23,7 @@ public class CameraFadeObstacles : MonoBehaviour
 
         foreach (RaycastHit hit in hits)
         {
-            Renderer rend = hit.collider.GetComponent<Renderer>();
-            if (rend != null)
+            foreach (Renderer rend in hit.collider.GetComponentsInChildren<Renderer>())
             {
                 currentlyBlocking.Add(rend);
                 if (!trackedRenderers.Contains(rend))
@@ -47,13 +46,15 @@ public class CameraFadeObstacles : MonoBehaviour
             bool isBlocking = currentlyBlocking.Contains(rend);
             float targetAlpha = isBlocking ? fadedAlpha : 1.0f;
 
-            Material mat = rend.material;
-            Color color = mat.color;
-            color.a = Mathf.MoveTowards(color.a, targetAlpha, fadeSpeed * Time.deltaTime);
-            mat.color = color;
+            foreach (Material mat in rend.materials)
+            {
+                Color color = mat.color;
+                color.a = Mathf.MoveTowards(color.a, targetAlpha, fadeSpeed * Time.deltaTime);
+                mat.color = color;
+            }
 
             // Stop tracking once it is fully solid again
-            if (!isBlocking && Mathf.Approximately(color.a, 1.0f))
+            if (!isBlocking && Mathf.Approximately(rend.material.color.a, 1.0f))
             {
                 trackedRenderers.RemoveAt(i);
             }

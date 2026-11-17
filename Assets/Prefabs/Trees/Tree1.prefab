@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9042773765720631306}
   - component: {fileID: 7982762355887604193}
+  - component: {fileID: 5111673463114309744}
   m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
@@ -83,6 +84,14 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &5111673463114309744
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4341726518241980561}
+  m_Mesh: {fileID: -2124705421725058983, guid: 2609d88fd2d62d0418ccff30da6a041e, type: 3}
 --- !u!1 &8689639562423148904
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +103,7 @@ GameObject:
   - component: {fileID: 2921438632766830504}
   - component: {fileID: 365754762274864943}
   - component: {fileID: 5219817598937345250}
+  - component: {fileID: 5200287142256766860}
   m_Layer: 8
   m_Name: Tree1
   m_TagString: Untagged
@@ -177,6 +187,29 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &5200287142256766860
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689639562423148904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0075
+  m_Height: 0.11
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.05}
 --- !u!1001 &7534037350765111190
 PrefabInstance:
   m_ObjectHideFlags: 0
