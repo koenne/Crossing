@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 1870534969839567781}
   - component: {fileID: 841397272642292652}
   - component: {fileID: 3927732096548341684}
+  - component: {fileID: 2189698482076005562}
   m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
@@ -207,3 +208,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8619775876966244568}
   m_Mesh: {fileID: 8314571269056883277, guid: 2609d88fd2d62d0418ccff30da6a041e, type: 3}
+--- !u!65 &2189698482076005562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619775876966244568}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.025719475, y: 0.023572356, z: 0.050086983}
+  m_Center: {x: -0.00029248977, y: -0.00025263525, z: 0.02489321}
